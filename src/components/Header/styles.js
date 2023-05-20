@@ -1,14 +1,9 @@
 import styled from 'styled-components/native';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Colors } from '../../config/Colors';
 import { Fonts } from '../../config/Fonts';
-import LinearGradient from 'react-native-linear-gradient';
 
-export const Container = styled(LinearGradient).attrs({
-  colors: ['#FF7F00', 'rgba(255, 230, 155, 1)', 'rgba(255, 230, 155, 1)'],
-  start: { x: 0, y: 0 },
-  end: { x: 0, y: 1 },
-})`
+export const Container = styled.View`
+  background-color: ${Colors.background};
   width: 100%;
   height: 120px;
   flex-direction: row;
@@ -17,9 +12,10 @@ export const ViewTitle = styled.View`
   align-self: center;
 `;
 export const TextTitle = styled.Text`
-  font-size: 20px;
-  left: 3px;
-  color: ${Colors.inputText};
+  font-size: 18px;
+  right: 40px;
+  bottom: 20px;
+  color: ${Colors.fontColorDark};
   font-family: ${Fonts.PrimaryFontMedium};
 `;
 
@@ -30,15 +26,8 @@ export const ViewLogo = styled.View`
   margin-top: 40px;
 `;
 export const ButtonIcon = styled.TouchableOpacity`
+  margin: 20px 20px;
   align-items: center;
-  margin: 25px 0 0 5px;
+  justify-content: center;
   height: 75px;
-`;
-
-export const Icon = styled(MaterialCommunityIcons).attrs({
-  size: 40,
-})`
-  left: 0px;
-  top: 30px;
-  color: ${Colors.inputText};
 `;

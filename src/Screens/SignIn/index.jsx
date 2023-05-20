@@ -1,17 +1,20 @@
 import React, { useState, useContext } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { UserContext } from '../../contexts/UserContext';
-import Logo from '../../assets/svg/pigz-logotipo-branco.svg';
-import { Keyboard } from 'react-native';
+import { Keyboard, ScrollView } from 'react-native';
+//-------------------------Configs----------------------------------------------------
+import { Colors } from '../../config/Colors';
+//-------------------------Validations------------------------------------------------
+import { signInValidate } from '../../validation/signInValidate';
+//-------------------------Components-------------------------------------------------
+import { Formik } from 'formik';
 import ButtonCustom from '../../components/ButtonCustom';
 import InputCustom from '../../components/InputCustom';
-import { Colors } from '../../config/Colors';
-import { Formik } from 'formik';
-
+import ButtonWSvgIcon from '../../components/ButtonWSvgIcon';
+import GoogleSvg from '../../assets/svg/logo_google.svg';
+import Logo from '../../assets/svg/pigz-logotipo-branco.svg';
 import {
   Container,
   ViewLogo,
-  ViewTitle,
   TextTitle,
   ViewInput,
   TextTitleInput,
@@ -19,107 +22,75 @@ import {
   ButtonRecoveryPassword,
   TextPassword,
   ViewButton,
-  ViewButtons,
-  Spacer,
-  ErrorMessage,
+  ButtonRegister,
+  TextRegister,
+  ViewButtonGoogle,
+  ViewTileEnter,
+  TextEnter,
+  ViewLine,
 } from './styles';
-import { signInValidate } from '../../validation/signInValidate';
-import { apiAuth } from '../../Services/Auth';
-import { setItemAsync } from '../../utils';
 
 export default () => {
   const { navigate } = useNavigation();
-  const { state, dispatch } = useContext(UserContext);
-
   const [loading, setLoading] = useState(false);
 
   const handleLogin = async (values) => {
-    try {
-      Keyboard.dismiss();
-      setLoading(true);
-      let dados = {
-        userName: values.email,
-        password: values.password,
-      };
-      const response = await apiAuth.login(dados);
-      console.log('RESPONSE', JSON.stringify(response.data));
-      if (response.success) {
-        setItemAsync('token', response.data.token.accessToken);
-        setItemAsync('user', response.data);
-        dispatch({
-          type: 'SET_USER',
-          payload: {
-            id: response.data.user.id,
-            nome: response.data.user.nome,
-            cpf: response.data.user.cpf,
-            dataNascimento: response.data.user.dataNascimento,
-            email: response.data.user.email,
-            telefone: response.data.user.telefone,
-          },
-        });
-        navigate('MainTab');
-      } else {
-        console.log(response.errors[0]);
-      }
-    } catch (error) {
-      console.error('SIGNIN::HANDLESIGNIN', error);
-    } finally {
+    Keyboard.dismiss();
+    setLoading(true);
+
+    setTimeout(() => {
+      navigate('MainTab');
       setLoading(false);
-    }
+    }, 2000);
   };
 
   return (
     <Formik
-      initialValues={{ email: 'felipe.m.buch@gmail.com', password: 'a8felipe' }}
+      initialValues={{ email: 'felipe@gmail.com', password: 'a8felipe' }}
       onSubmit={handleLogin}
       validationSchema={signInValidate}
     >
-      {({ handleChange, handleSubmit, handleBlur, errors, touched, values, isSubmitting }) => (
+      {({ handleChange, handleSubmit, handleBlur, errors, touched, values }) => (
         <Container>
-          <ViewLogo>
-            <Logo width="100" height="50" />
-            <TextTitle>Para entregadores</TextTitle>
-          </ViewLogo>
+          <ScrollView>
+            <ViewLogo>
+              <Logo width="100" height="50" />
+              <TextTitle>Para entregadores</TextTitle>
+            </ViewLogo>
 
-          <ViewInput>
-            <TextTitleInput>Login</TextTitleInput>
-            <TextUpInput>Email ou Telefone</TextUpInput>
-            <InputCustom
-              inputSimple
-              placeholder={'E-mail'}
-              icon
-              iconName={'email'}
-              onBlur={handleBlur('email')}
-              value={values.email}
-              borderColor={Colors.primary}
-              onChangeText={handleChange('email')}
-              error={errors.email && touched.email}
-              errorMessage={
-                touched.email && errors.email && <ErrorMessage>{errors?.email}</ErrorMessage>
-              }
-            />
-            <TextUpInput>Senha</TextUpInput>
-            <InputCustom
-              inputPassword
-              icon
-              iconName={'lock'}
-              placeholder={'Senha'}
-              onBlur={handleBlur('password')}
-              borderColor={Colors.inputBorder}
-              value={values.password}
-              onChangeText={handleChange('password')}
-              error={errors.password && touched.password}
-              errorMessage={errors.password}
-            />
-            <ButtonRecoveryPassword onPress={() => navigate('ForgotPassword')}>
-              <TextPassword>Esqueci minha senha</TextPassword>
-            </ButtonRecoveryPassword>
-          </ViewInput>
-
-          <ViewButtons>
+            <ViewInput>
+              <TextTitleInput>Login</TextTitleInput>
+              <TextUpInput>Email ou Telefone</TextUpInput>
+              <InputCustom
+                inputSimple
+                placeholder={'E-mail'}
+                onBlur={handleBlur('email')}
+                value={values.email}
+                borderColor={Colors.primary}
+                onChangeText={handleChange('email')}
+                error={errors.email && touched.email}
+                errorMessage={errors.password}
+              />
+              <TextUpInput>Senha</TextUpInput>
+              <InputCustom
+                inputPassword
+                icon
+                iconName={'lock'}
+                placeholder={'Senha'}
+                onBlur={handleBlur('password')}
+                borderColor={Colors.inputBorder}
+                value={values.password}
+                onChangeText={handleChange('password')}
+                error={errors.password && touched.password}
+                errorMessage={errors.password}
+              />
+              <ButtonRecoveryPassword onPress={() => navigate('ForgotPassword')}>
+                <TextPassword>Esqueci minha senha</TextPassword>
+              </ButtonRecoveryPassword>
+            </ViewInput>
             <ViewButton>
               <ButtonCustom
-                loading={isSubmitting}
+                loading={loading}
                 title={'Entrar'}
                 elevation={3}
                 bgcolor={Colors.buttonColorPrimary}
@@ -127,18 +98,25 @@ export default () => {
                 onPress={handleSubmit}
               />
             </ViewButton>
-            <ViewButton style={{ marginBottom: 0 }}>
-              <ButtonCustom
-                title={'Criar Conta'}
-                bgcolor={Colors.transparent}
-                color={Colors.fontLight}
-                onPress={() => navigate('SignUp')}
-                elevation={0}
-                borderWidth={'1px'}
-                borderColor={Colors.fontLight}
+            <ButtonRegister>
+              <TextRegister color={Colors.fontColorGray}>
+                Não tem uma Conta?
+                <TextRegister color={Colors.primary}> Criar agora!</TextRegister>
+              </TextRegister>
+            </ButtonRegister>
+            <ViewTileEnter>
+              <TextEnter>Entrar com</TextEnter>
+              <ViewLine />
+            </ViewTileEnter>
+            <ViewButtonGoogle>
+              <ButtonWSvgIcon
+                children={<GoogleSvg height="20" width="20" />}
+                color={Colors.fontColorGray}
+                title={'Continuar com o Google'}
+                bgcolor={Colors.background}
               />
-            </ViewButton>
-          </ViewButtons>
+            </ViewButtonGoogle>
+          </ScrollView>
         </Container>
       )}
     </Formik>

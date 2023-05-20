@@ -21,7 +21,6 @@ export const Input = styled.TextInput`
   font-size: 14px;
   color: ${Colors.inputText};
   padding-left: 8px;
-  top: 5px;
   font-family: ${Fonts.PrimaryFont};
 `;
 export const ButtonEye = styled.TouchableOpacity``;

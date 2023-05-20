@@ -1,7 +1,9 @@
 import { useNavigation } from '@react-navigation/core';
 import React from 'react';
-import { Container, ButtonIcon, Icon, ViewLogo, ViewTitle, TextTitle } from './styles';
+import { Container, ButtonIcon, ViewLogo, ViewTitle, TextTitle } from './styles';
 import Logo from '../../assets/svg/LogoPreload.svg';
+import { Colors } from '../../config/Colors';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Header = ({ title, icon, iconName, logo, textTitle }) => {
   const { goBack } = useNavigation();
@@ -18,16 +20,15 @@ const Header = ({ title, icon, iconName, logo, textTitle }) => {
     <Container>
       {icon && (
         <ButtonIcon onPress={() => handleOnPress()}>
-          <Icon name={iconName} />
+          <Icon name={iconName} size={24} color={Colors.primary} />
         </ButtonIcon>
       )}
-      <ViewLogo style={{ right: icon ? 20 : 1 }}>
+      <ViewLogo>
         {title && (
           <ViewTitle>
             <TextTitle>{textTitle}</TextTitle>
           </ViewTitle>
         )}
-        {logo && <Logo width="178" height="67" />}
       </ViewLogo>
     </Container>
   );

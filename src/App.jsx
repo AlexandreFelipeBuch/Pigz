@@ -9,7 +9,7 @@ export default () => {
   return (
     <UserContextProvider>
       <NavigationContainer>
-        <StatusBar translucent={true} backgroundColor="transparent" />
+        <StatusBar translucent={true} backgroundColor="transparent" barStyle="dark-content" />
         <MainStack />
       </NavigationContainer>
     </UserContextProvider>

@@ -1,12 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import {
-  useNavigation,
-  useRoute,
-  getFocusedRouteNameFromRoute,
-  useFocusEffect,
-} from '@react-navigation/native';
-import { TabArea, TabItem, TextBottom } from './styles';
+import { useNavigation, useRoute, getFocusedRouteNameFromRoute } from '@react-navigation/native';
+import { TabArea, TabItem, TextBottom, Line } from './styles';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Ticket from '../../assets/svg/ticket.svg';
+import Home from '../../assets/svg/home.svg';
+import Profile from '../../assets/svg/account.svg';
 import { Colors } from '../../config/Colors';
 
 export default () => {
@@ -22,6 +20,7 @@ export default () => {
       setButtonTab(routeName);
     }
   };
+
   useEffect(() => {
     handleNav();
   }, [routeName]);
@@ -29,76 +28,49 @@ export default () => {
   return (
     <TabArea>
       <TabItem onPress={() => navigate('Home')}>
-        <MaterialCommunityIcons
-          name="home-variant"
-          size={30}
-          style={{
-            opacity: buttonTab === 'Home' ? 1 : 0.3,
-            color: Colors.fontLight,
-          }}
+        <Ticket
+          fill={buttonTab === 'Home' ? Colors.primary : Colors.gray_04}
+          width={26}
+          height={26}
         />
         <TextBottom
           style={{
-            opacity: buttonTab === 'Home' ? 1 : 0.3,
-            color: Colors.fontLight,
+            color: buttonTab === 'Home' ? Colors.primary : Colors.gray_04,
           }}
         >
-          Home
+          Relatórios
         </TextBottom>
+        {buttonTab === 'Home' && <Line />}
       </TabItem>
-      <TabItem onPress={() => navigate(null)}>
-        <MaterialCommunityIcons
-          name="ticket-confirmation-outline"
-          size={30}
-          style={{
-            opacity: routeName === null ? 1 : 0.3,
-            color: Colors.fontLight,
-          }}
+      <TabItem onPress={() => navigate('Home')}>
+        <Home
+          fill={buttonTab === 'Home' ? Colors.primary : Colors.gray_04}
+          width={26}
+          height={26}
         />
         <TextBottom
           style={{
-            opacity: routeName === null ? 1 : 0.3,
-            color: Colors.fontLight,
+            color: buttonTab === 'Home' ? Colors.primary : Colors.gray_04,
           }}
         >
-          Ingressos
+          Visão Geral
         </TextBottom>
-      </TabItem>
-      <TabItem onPress={() => navigate(null)}>
-        <MaterialCommunityIcons
-          name="help-circle-outline"
-          size={30}
-          style={{
-            opacity: routeName === null ? 1 : 0.3,
-            color: Colors.fontLight,
-          }}
-        />
-        <TextBottom
-          style={{
-            opacity: routeName === null ? 1 : 0.3,
-            color: Colors.fontLight,
-          }}
-        >
-          Ajuda
-        </TextBottom>
+        {buttonTab === 'Home' && <Line />}
       </TabItem>
       <TabItem onPress={() => navigate('Profile')}>
-        <MaterialCommunityIcons
-          name="account-outline"
-          size={30}
-          style={{
-            opacity: routeName === 'Profile' ? 1 : 0.3,
-            color: Colors.fontLight,
-          }}
+        <Profile
+          width="26"
+          height="26"
+          fill={buttonTab === 'Profile' ? Colors.primary : Colors.gray_04}
         />
         <TextBottom
           style={{
-            opacity: routeName === 'Profile' ? 1 : 0.3,
-            color: Colors.fontLight,
+            color: buttonTab === 'Profile' ? Colors.primary : Colors.gray_04,
           }}
         >
           Perfil
         </TextBottom>
+        {buttonTab === 'Profile' && <Line />}
       </TabItem>
     </TabArea>
   );
