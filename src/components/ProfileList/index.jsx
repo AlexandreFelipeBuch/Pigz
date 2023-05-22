@@ -11,21 +11,21 @@ const ProfileList = () => {
   return (
     <Container>
       <ButtonList onPress={() => navigate('UpdateProfile')}>
-        <Icons name="account-edit-outline" size={30} color={Colors.inputText} />
+        <Icons name="account-edit-outline" size={30} color={Colors.primary} />
         <TextItem>Meus dados</TextItem>
-        <Icons name="chevron-right" size={30} color={Colors.inputText} />
+        <Icons name="chevron-right" size={30} color={Colors.primary} />
       </ButtonList>
       <View style={styles.line}></View>
       <ButtonList>
-        <Icons name="shopping-outline" size={28} color={Colors.inputText} />
-        <TextItem>Minhas Compras</TextItem>
-        <Icons name="chevron-right" size={30} color={Colors.inputText} />
+        <Icons name="moped-outline" size={28} color={Colors.primary} />
+        <TextItem>Entregas</TextItem>
+        <Icons name="chevron-right" size={30} color={Colors.primary} />
       </ButtonList>
       <View style={styles.line}></View>
       <ButtonList>
-        <Icons name="help-circle-outline" size={28} color={Colors.inputText} />
+        <Icons name="help-circle-outline" size={28} color={Colors.primary} />
         <TextItem>Ajuda</TextItem>
-        <Icons name="chevron-right" size={30} color={Colors.inputText} />
+        <Icons name="chevron-right" size={30} color={Colors.primary} />
       </ButtonList>
       <View style={styles.line}></View>
     </Container>

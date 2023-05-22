@@ -1,7 +1,6 @@
 import React from 'react';
 import { Colors } from '../../config/Colors';
-import { Container, ButtonText, Loading, Icon, ViewRow, ViewIcon } from './styles';
-
+import { ButtonContainer, Container, ButtonText, Loading, Icon, ViewRow, ViewIcon } from './styles';
 const ButtonCustom = ({
   title,
   disabled,
@@ -13,36 +12,38 @@ const ButtonCustom = ({
   borderColor,
   borderWidth,
   iconName,
-  elevation,
+  iconColor,
 }) => {
   return (
     <>
       {loading ? (
-        <Container onPress={onPress} bgcolor={bgcolor}>
-          {primary ? (
-            <Loading color={Colors.loadingLight} size={24} />
-          ) : (
-            <Loading color={Colors.loadingLight} size={24} />
-          )}
-        </Container>
+        <ButtonContainer onPress={onPress}>
+          <Container bgcolor={bgcolor}>
+            {primary ? (
+              <Loading color={Colors.loadingLight} size={24} />
+            ) : (
+              <Loading color={Colors.loadingLight} size={24} />
+            )}
+          </Container>
+        </ButtonContainer>
       ) : (
-        <Container
-          elevation={elevation}
-          disabled={disabled}
-          onPress={onPress}
-          bgcolor={bgcolor}
-          borderWidth={borderWidth}
-          borderColor={borderColor}
-        >
-          <ViewRow>
-            {iconName ? (
-              <ViewIcon>
-                <Icon name={iconName} />
-              </ViewIcon>
-            ) : null}
-            <ButtonText color={color}>{title}</ButtonText>
-          </ViewRow>
-        </Container>
+        <ButtonContainer onPress={onPress}>
+          <Container
+            disabled={disabled}
+            bgcolor={bgcolor}
+            borderWidth={borderWidth}
+            borderColor={borderColor}
+          >
+            <ViewRow>
+              {iconName ? (
+                <ViewIcon>
+                  <Icon iconColor={iconColor} name={iconName} />
+                </ViewIcon>
+              ) : null}
+              <ButtonText color={color}>{title}</ButtonText>
+            </ViewRow>
+          </Container>
+        </ButtonContainer>
       )}
     </>
   );

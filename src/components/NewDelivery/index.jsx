@@ -7,7 +7,9 @@ import {
   InputContainer,
   Input,
   ButtonOk,
+  ViewOk,
   TextButton,
+  ButtonScan,
   ScanContainer,
   ScanText,
 } from './styles';
@@ -22,13 +24,17 @@ const NewDelivery = () => {
       <InputContainer>
         <Input />
         <ButtonOk>
-          <TextButton>OK</TextButton>
+          <ViewOk>
+            <TextButton>OK</TextButton>
+          </ViewOk>
         </ButtonOk>
       </InputContainer>
-      <ScanContainer>
-        <Icon name="qrcode-scan" size={20} color={Colors.fontLight} />
-        <ScanText>Escanear QRCode</ScanText>
-      </ScanContainer>
+      <ButtonScan>
+        <ScanContainer>
+          <Icon name="qrcode-scan" size={20} color={Colors.fontLight} />
+          <ScanText>Escanear QRCode</ScanText>
+        </ScanContainer>
+      </ButtonScan>
     </DeliveryContainer>
   );
 };

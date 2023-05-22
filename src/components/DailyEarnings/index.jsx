@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Colors } from '../../config/Colors';
 
 const DailyEarnings = () => {
-  const [showValue, setShowValue] = useState(true);
+  const [showValue, setShowValue] = useState(false);
 
   const toggleValueVisibility = () => {
     setShowValue(!showValue);
@@ -18,7 +18,7 @@ const DailyEarnings = () => {
         <TextTitle>29/07</TextTitle>
       </RowContainer>
       <RowContainer>
-        {showValue && <TextValue>R$ 150</TextValue>}
+        {showValue ? <TextValue>R$ 150</TextValue> : <TextValue>R$ ...</TextValue>}
         <TouchableOpacity onPress={toggleValueVisibility}>
           <Icon
             name={showValue ? 'eye-outline' : 'eye-off-outline'}

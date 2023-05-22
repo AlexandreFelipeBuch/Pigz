@@ -12,19 +12,14 @@ import { StyleSheet, Image } from 'react-native';
 
 const HeaderProfile = ({ name, email, imageUri }) => {
   const { goBack } = useNavigation();
-  const navigation = useNavigation();
 
   const handleOnPress = () => {
-    if (iconName === 'menu') {
-      navigation.toggleDrawer();
-    } else {
-      goBack();
-    }
+    goBack();
   };
   return (
     <Container>
       <ButtonIcon onPress={() => handleOnPress()}>
-        <Icon name={'chevron-left'} />
+        <Icon name={'arrow-left'} />
       </ButtonIcon>
       <ViewLogo>
         <Image style={styles.image} source={{ uri: imageUri }} />

@@ -6,7 +6,6 @@ import { Fonts } from '../../config/Fonts';
 export const Container = styled.SafeAreaView`
   flex: 1;
   width: 100%;
-
   background: ${Colors.backgroundLight};
 `;
 

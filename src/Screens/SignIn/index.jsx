@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { Keyboard, ScrollView } from 'react-native';
 //-------------------------Configs----------------------------------------------------
@@ -57,7 +57,6 @@ export default () => {
               <Logo width="100" height="50" />
               <TextTitle>Para entregadores</TextTitle>
             </ViewLogo>
-
             <ViewInput>
               <TextTitleInput>Login</TextTitleInput>
               <TextUpInput>Email ou Telefone</TextUpInput>
@@ -69,7 +68,7 @@ export default () => {
                 borderColor={Colors.primary}
                 onChangeText={handleChange('email')}
                 error={errors.email && touched.email}
-                errorMessage={errors.password}
+                errorMessage={errors.email}
               />
               <TextUpInput>Senha</TextUpInput>
               <InputCustom
@@ -93,7 +92,7 @@ export default () => {
                 loading={loading}
                 title={'Entrar'}
                 elevation={3}
-                bgcolor={Colors.buttonColorPrimary}
+                bgcolor={Colors.gradientPrimary}
                 color={Colors.fontLight}
                 onPress={handleSubmit}
               />

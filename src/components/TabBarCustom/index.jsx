@@ -27,20 +27,20 @@ export default () => {
 
   return (
     <TabArea>
-      <TabItem onPress={() => navigate('Home')}>
+      <TabItem onPress={() => navigate('DeliveryScreen')}>
         <Ticket
-          fill={buttonTab === 'Home' ? Colors.primary : Colors.gray_04}
+          fill={buttonTab === 'DeliveryScreen' ? Colors.primary : Colors.gray_04}
           width={26}
           height={26}
         />
         <TextBottom
           style={{
-            color: buttonTab === 'Home' ? Colors.primary : Colors.gray_04,
+            color: buttonTab === 'DeliveryScreen' ? Colors.primary : Colors.gray_04,
           }}
         >
           Relatórios
         </TextBottom>
-        {buttonTab === 'Home' && <Line />}
+        {buttonTab === 'DeliveryScreen' && <Line />}
       </TabItem>
       <TabItem onPress={() => navigate('Home')}>
         <Home

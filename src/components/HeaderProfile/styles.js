@@ -5,9 +5,9 @@ import { Fonts } from '../../config/Fonts';
 import LinearGradient from 'react-native-linear-gradient';
 
 export const Container = styled(LinearGradient).attrs({
-  colors: ['#FF7F00', 'rgba(255, 230, 155, 1)', 'rgba(255, 230, 155, 1)'],
-  start: { x: 0, y: 0 },
-  end: { x: 0, y: 2 },
+  colors: ['#FA641E', '#FF881F'],
+  start: { x: 1, y: 0 },
+  end: { x: 0, y: 1 },
 })`
   height: 230px;
 `;
@@ -29,20 +29,19 @@ export const ButtonIcon = styled.TouchableOpacity`
 `;
 
 export const Icon = styled(MaterialCommunityIcons).attrs({
-  size: 40,
+  size: 24,
 })`
   right: 15px;
   top: 30px;
-  color: ${Colors.inputText};
+  color: ${Colors.fontLight};
 `;
 export const TextName = styled.Text`
   font-size: 18px;
-  color: ${Colors.inputText};
+  color: ${Colors.fontLight};
   font-family: ${Fonts.PrimaryFontBold};
 `;
 export const TextEmail = styled.Text`
   font-size: 13px;
-
-  color: white;
+  color: ${Colors.fontLight};
   font-family: ${Fonts.PrimaryFont};
 `;

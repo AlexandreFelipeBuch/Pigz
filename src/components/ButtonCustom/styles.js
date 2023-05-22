@@ -2,12 +2,25 @@ import styled from 'styled-components/native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Fonts } from '../../config/Fonts';
 import { Colors } from '../../config/Colors';
+import LinearGradient from 'react-native-linear-gradient';
 
-export const Container = styled.TouchableOpacity.attrs({
-  activeOpacity: 0.7,
+export const Container = styled(LinearGradient).attrs((props) => ({
+  colors: props.bgcolor,
+  start: { x: 1, y: 0 },
+  end: { x: 0, y: 1 },
+}))`
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  width: 100%;
+  height: 48px;
+  border-color: ${(props) => `${props.borderColor}`};
+  border-width: ${(props) => `${props.borderWidth}`};
+`;
+export const ButtonContainer = styled.TouchableOpacity.attrs({
+  activeOpacity: 1,
 })`
-  background-color: ${(props) => `${props.bgcolor}`};
-
+  background: transparent;
   align-items: center;
   justify-content: center;
   border-radius: 16px;
@@ -31,7 +44,7 @@ export const Loading = styled.ActivityIndicator`
 export const Icon = styled(MaterialCommunityIcons).attrs({
   size: 20,
 })`
-  color: ${Colors.textDark};
+  color: ${(props) => `${props.iconColor}`};
 `;
 export const ViewIcon = styled.View``;
 export const ViewRow = styled.View`

@@ -39,8 +39,9 @@ export const Input = styled.TextInput`
   border-radius: 16px;
   margin-right: 10px;
 `;
+export const ButtonOk = styled.TouchableOpacity``;
 
-export const ButtonOk = styled(LinearGradient).attrs({
+export const ViewOk = styled(LinearGradient).attrs({
   colors: ['#FA641E', '#FF881F'],
   start: { x: 1, y: 0 },
   end: { x: 0, y: 1 },
@@ -49,7 +50,6 @@ export const ButtonOk = styled(LinearGradient).attrs({
   height: 46px;
   align-items: center;
   justify-content: center;
-
   border-radius: 16px;
 `;
 
@@ -70,7 +70,6 @@ export const ScanContainer = styled(LinearGradient).attrs({
   align-items: center;
   margin-top: 20px;
   background: ${Colors.primary};
-
   align-items: center;
   justify-content: center;
   background-color: ${Colors.primary};
@@ -83,3 +82,4 @@ export const ScanText = styled.Text`
   margin: 5px;
   font-family: ${Fonts.PrimaryFontMedium};
 `;
+export const ButtonScan = styled.TouchableOpacity``;
