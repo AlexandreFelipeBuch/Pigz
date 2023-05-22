@@ -7,7 +7,7 @@ Este repositório contém o código-fonte e as imagens do projeto Pigz, desenvol
 ##LINK PARA BAIXAR o APK
 <a href="https://github.com/AlexandreFelipeBuch/Pigz/raw/main/image/app-release.apk">Baixar o aplicativo</a>
 
-Aqui estão algumas capturas de tela do aplicativo Pigz:
+Aqui estão as capturas de tela do aplicativo Pigz:
 
 <div align="center">
   <img alt="Tela de Pré-Carregamento" src="./image/Preload.png" />
