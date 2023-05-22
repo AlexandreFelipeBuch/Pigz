@@ -10,8 +10,9 @@ Aqui estão algumas capturas de tela do aplicativo Pigz:
   <img alt="Tela de Pré-Carregamento" src="./image/Preload.png" />
   <img alt="Tela de Login" src="./image/Signin.png" />
   <img alt="Tela Inicial" src="./image/Home.png" />
-  <img alt="Tela de Perfil" src="./image/Profile.png" />
   <img alt="Tela de Entrega" src="./image/delivery.png" />
+    <img alt="Tela de Perfil" src="./image/Profile.png" />
+
 </div>
 
 Você também pode acessar o aplicativo em funcionamento através do seguinte [link](https://felipe-buch-portifolio.netlify.app/).
