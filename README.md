@@ -4,6 +4,9 @@ Este repositório contém o código-fonte e as imagens do projeto Pigz, desenvol
 
 ## Demonstração
 
+##LINK PARA BAIXAR o APK
+<a href="c./image/app-release.apk">Baixar o aplicativo</a>
+
 Aqui estão algumas capturas de tela do aplicativo Pigz:
 
 <div align="center">
@@ -14,8 +17,6 @@ Aqui estão algumas capturas de tela do aplicativo Pigz:
     <img alt="Tela de Perfil" src="./image/Profile.png" />
 
 </div>
-
-Você também pode acessar o aplicativo em funcionamento através do seguinte [link](https://felipe-buch-portifolio.netlify.app/).
 
 ## Tecnologias utilizadas
 
