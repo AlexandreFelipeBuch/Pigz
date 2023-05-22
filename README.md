@@ -1,6 +1,6 @@
 # Pigz - Projeto para Processo Seletivo
 
-Este repositório contém o código-fonte e as imagens do projeto Pigz, desenvolvido para um processo seletivo. O Pigz é um aplicativo de entrega de comida que permite aos usuários fazer pedidos de restaurantes locais.
+Este repositório contém o código-fonte e as imagens do projeto Pigz, desenvolvido para um processo seletivo.
 
 ## Demonstração
 
