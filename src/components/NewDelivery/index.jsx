@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Colors } from '../../config/Colors';
 import {
   DeliveryContainer,
   Title,
@@ -13,14 +14,12 @@ import {
   ScanContainer,
   ScanText,
 } from './styles';
-import { Colors } from '../../config/Colors';
 
 const NewDelivery = () => {
   return (
     <DeliveryContainer>
       <Title>Iniciar Nova Entrega</Title>
       <RowText>Número de Identificação</RowText>
-
       <InputContainer>
         <Input />
         <ButtonOk>

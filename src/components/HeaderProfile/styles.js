@@ -11,15 +11,17 @@ export const Container = styled(LinearGradient).attrs({
 })`
   height: 230px;
 `;
-export const ViewTitle = styled.View`
-  align-self: center;
-`;
 
 export const ViewLogo = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: center;
 `;
+
+export const ViewTitle = styled.View`
+  align-self: center;
+`;
+
 export const ViewTextProfile = styled.View`
   margin-left: 20px;
 `;

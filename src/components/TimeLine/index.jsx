@@ -15,17 +15,6 @@ import {
   SubTitle2,
 } from './styles';
 import React from 'react';
-import styled from 'styled-components/native';
-import { Colors } from '../../config/Colors';
-import { Fonts } from '../../config/Fonts';
-
-const TimelineItem = ({ title, description }) => (
-  <TimelineItemContainer>
-    <ViewItems>
-      <Description>{description}</Description>
-    </ViewItems>
-  </TimelineItemContainer>
-);
 
 const Timeline = () => (
   <TimelineContainer>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Colors } from '../../config/Colors';
-import { Container, InputArea, Input, ButtonEye, TextError, ViewIcon, ButtonEdit } from './styles';
+import { Container, InputArea, Input, ButtonEye, TextError, ButtonEdit } from './styles';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { TextInputMask } from 'react-native-masked-text';
 

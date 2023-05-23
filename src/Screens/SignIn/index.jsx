@@ -24,10 +24,10 @@ import {
   ViewButton,
   ButtonRegister,
   TextRegister,
-  ViewButtonGoogle,
-  ViewTileEnter,
-  TextEnter,
   ViewLine,
+  TextEnter,
+  ViewTileEnter,
+  ViewButtonGoogle,
 } from './styles';
 
 export default () => {

@@ -1,6 +1,5 @@
 import styled from 'styled-components/native';
 import { Colors } from '../../config/Colors';
-import LinearGradient from 'react-native-linear-gradient';
 import { Fonts } from '../../config/Fonts';
 
 export const Container = styled.SafeAreaView`

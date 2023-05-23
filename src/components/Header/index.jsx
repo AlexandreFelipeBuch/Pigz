@@ -1,11 +1,10 @@
 import { useNavigation } from '@react-navigation/core';
 import React from 'react';
 import { Container, ButtonIcon, ViewLogo, ViewTitle, TextTitle } from './styles';
-import Logo from '../../assets/svg/LogoPreload.svg';
 import { Colors } from '../../config/Colors';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const Header = ({ title, icon, iconName, logo, textTitle }) => {
+const Header = ({ title, icon, iconName, textTitle }) => {
   const { goBack } = useNavigation();
   const navigation = useNavigation();
 

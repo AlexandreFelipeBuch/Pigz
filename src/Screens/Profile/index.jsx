@@ -1,10 +1,12 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { Container, ButtonExit, TextExit } from './styles';
+//-----------------------Configs-------------------------------------------------
+import { Colors } from '../../config/Colors';
+//----------------------Components-----------------------------------------------
 import HeaderProfile from '../../components/HeaderProfile';
 import ProfileList from '../../components/ProfileList';
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { Colors } from '../../config/Colors';
+import { Container, ButtonExit, TextExit } from './styles';
 
 export default () => {
   const { navigate } = useNavigation();

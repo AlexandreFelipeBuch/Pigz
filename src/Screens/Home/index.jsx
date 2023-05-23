@@ -1,9 +1,10 @@
 import React from 'react';
-import { Container } from './styles';
+//--------------------------Components------------------------
 import Header from '../../components/Header';
 import DailyEarnings from '../../components/DailyEarnings';
 import Delivery from '../../components/Delivery';
 import NewDelivery from '../../components/NewDelivery';
+import { Container } from './styles';
 
 export default () => {
   return (

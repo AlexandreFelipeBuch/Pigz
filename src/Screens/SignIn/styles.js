@@ -13,11 +13,6 @@ export const ViewLogo = styled.View`
   margin: 100px 0 40px 0;
   width: 100%;
 `;
-export const ViewTitle = styled.View`
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-`;
 
 export const TextTitle = styled.Text`
   font-size: 18px;

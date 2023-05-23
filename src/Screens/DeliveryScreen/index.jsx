@@ -1,5 +1,11 @@
 import React from 'react';
-import { useNavigation } from '@react-navigation/native';
+//--------------Configs------------------------
+import { Colors } from '../../config/Colors';
+//--------------Components--------------------------------
+import Header from '../../components/Header';
+import ButtonCustom from '../../components/ButtonCustom';
+import DeliveryIcon from '../../assets/svg/deliveryIcon.svg';
+import Timeline from '../../components/TimeLine';
 import {
   Container,
   ViewTitle,
@@ -17,15 +23,8 @@ import {
   ViewButton,
   TextTotal,
 } from './styles';
-import Header from '../../components/Header';
-import ButtonCustom from '../../components/ButtonCustom';
-import { Colors } from '../../config/Colors';
-import DeliveryIcon from '../../assets/svg/deliveryIcon.svg';
-import Timeline from '../../components/TimeLine';
 
 export default () => {
-  const { navigate } = useNavigation();
-
   return (
     <Container>
       <Header icon iconName={'arrow-left'} title textTitle={'Nova entrega'} />
