@@ -5,7 +5,7 @@ import { Fonts } from '../../config/Fonts';
 
 export const Container = styled.View`
   flex: 1;
-  background: ${Colors.backgroundLight};
+  background: ${Colors.background};
   align-items: center;
 `;
 export const ViewTitle = styled.View`
@@ -13,7 +13,7 @@ export const ViewTitle = styled.View`
   flex-direction: row;
   margin: 10px;
   justify-content: space-between;
-  background: ${Colors.backgroundLight};
+  background: ${Colors.background};
 `;
 export const ViewRow = styled.View`
   flex: 1;

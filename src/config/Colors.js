@@ -1,8 +1,11 @@
 export const Colors = {
   primary: '#FA641E',
+  secondary: '#70ff00',
   background: '#FFFFFF',
   fontColorDark: '#333333',
   fontColorGray: '#676767',
+  fontLight: '#ffff',
+  fontColorPrimary: '#FF5D00',
   buttonColorPrimary: '#FF881F',
   gradientPrimary: ['#FA641E', '#FF881F'],
   gradientSecondary: ['#FFFFFF', '#FFFFFF'],
@@ -11,4 +14,10 @@ export const Colors = {
   gray_03: '#CCCCCC',
   gray_04: '#9F9F9F',
   gray_05: '#F0F0F0',
+  error: '#E74C3C',
+  loadingLight: '#FFE69B',
+  inputBorder: '#FF9326',
+  transparent: 'transparent',
+  fontLight: '#ffff',
+  fontColorPrimary: '#FF5D00',
 };

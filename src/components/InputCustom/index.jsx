@@ -40,7 +40,7 @@ const InputCustom = ({
             editable={editable}
             onBlur={onBlur}
             onPressIn={onPressIn}
-            placeholderTextColor={Colors.inputText}
+            placeholderTextColor={Colors.fontColorGray}
             value={value}
             onChangeText={onChangeText}
             keyboardType={keyboardType}
@@ -50,7 +50,7 @@ const InputCustom = ({
           />
           {inputEdit && (
             <ButtonEdit>
-              <Icon name={iconEdit} size={28} color={Colors.inputText} />
+              <Icon name={iconEdit} size={28} color={Colors.fontColorGray} />
             </ButtonEdit>
           )}
           {error && <Icon name="alert-circle-outline" size={22} color={Colors.error} />}
@@ -71,7 +71,7 @@ const InputCustom = ({
             placeholder={placeholder}
             onBlur={onBlur}
             editable={editable}
-            placeholderTextColor={Colors.inputText}
+            placeholderTextColor={Colors.fontColorGray}
             value={value}
             onChangeText={onChangeText}
             keyboardType={keyboardType}
@@ -80,7 +80,7 @@ const InputCustom = ({
           />
           {inputEdit && (
             <ButtonEdit>
-              <Icon name={iconEdit} size={28} color={Colors.inputText} />
+              <Icon name={iconEdit} size={28} color={Colors.fontColorGray} />
             </ButtonEdit>
           )}
           {error && <Icon name="alert-circle-outline" size={22} color={Colors.error} />}
@@ -88,7 +88,7 @@ const InputCustom = ({
       )}
       {inputMasked && (
         <InputArea borderColor={error ? Colors.error : borderColor}>
-          {icon && <Icon name={iconName} size={22} color={Colors.inputText} />}
+          {icon && <Icon name={iconName} size={22} color={Colors.fontColorGray} />}
           <TextInputMask
             type={type}
             options={options}
@@ -98,13 +98,13 @@ const InputCustom = ({
             onBlur={onBlur}
             maxLength={14}
             disabled={disabled}
-            style={{ flex: 1, color: Colors.inputText, paddingLeft: 8 }}
+            style={{ flex: 1, color: Colors.fontColorGray, paddingLeft: 8 }}
             placeholder={placeholder}
-            placeholderTextColor={Colors.inputText}
+            placeholderTextColor={Colors.fontColorGray}
           />
           {inputEdit && (
             <ButtonEdit>
-              <Icon name={iconEdit} size={28} color={Colors.inputText} />
+              <Icon name={iconEdit} size={28} color={Colors.fontColorGray} />
             </ButtonEdit>
           )}
           {error && <Icon name="alert-circle-outline" size={22} color={Colors.error} />}

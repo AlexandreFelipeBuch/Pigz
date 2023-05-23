@@ -15,7 +15,7 @@ export const ButtonList = styled.TouchableOpacity`
 export const TextItem = styled.Text`
   flex: 1;
   font-size: 16px;
-  color: ${Colors.inputText};
+  color: ${Colors.fontColorGray};
   font-family: ${Fonts.PrimaryFont};
   margin-left: 10px;
   top: 7px;

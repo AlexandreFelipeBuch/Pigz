@@ -9,7 +9,7 @@ export const Container = styled.View`
 export const InputArea = styled.View`
   width: 100%;
   height: 50px;
-  background-color: ${Colors.backgroundLight};
+  background-color: ${Colors.background};
   flex-direction: row;
   border: 1px solid ${(props) => `${props.borderColor}`};
   border-radius: 16px;
@@ -19,7 +19,7 @@ export const InputArea = styled.View`
 export const Input = styled.TextInput`
   flex: 1;
   font-size: 14px;
-  color: ${Colors.inputText};
+  color: ${Colors.fontColorGray};
   padding-left: 8px;
   font-family: ${Fonts.PrimaryFont};
 `;

@@ -40,14 +40,14 @@ export const TextDescription = styled.Text`
   font-size: 16px;
   margin-left: 10px;
   top: 10px;
-  color: ${Colors.inputText};
+  color: ${Colors.fontColorGray};
   font-family: ${Fonts.PrimaryFontBold};
 `;
 export const TextCities = styled.Text`
   font-size: 13px;
   margin-left: 10px;
   top: 10px;
-  color: ${Colors.inputText};
+  color: ${Colors.fontColorGray};
   font-family: ${Fonts.PrimaryFontMedium};
 `;
 export const Images = styled.Image`
@@ -73,12 +73,12 @@ export const Icon = styled(MaterialCommunityIcons).attrs({
 })`
   right: 15px;
   top: 30px;
-  color: ${Colors.inputText};
+  color: ${Colors.fontColorGray};
 `;
 export const TextEmpty = styled.Text`
   font-size: 15px;
   text-align: center;
   margin-top: 50px;
-  color: ${Colors.inputText};
+  color: ${Colors.fontColorGray};
   font-family: ${Fonts.PrimaryFontMedium};
 `;

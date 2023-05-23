@@ -52,7 +52,7 @@ const ListCity = ({ data }) => {
   const renderCity = ({ item }) => (
     <ViewCity>
       <ViewCityTitle>
-        <Icon name="map-marker-outline" size={18} color={Colors.inputText} />
+        <Icon name="map-marker-outline" size={18} color={Colors.fontColorGray} />
         <TextCity>{item.state}</TextCity>
       </ViewCityTitle>
       <FlatList
