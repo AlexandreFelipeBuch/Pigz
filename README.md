@@ -7,6 +7,8 @@ Este repositório contém o código-fonte e as imagens do projeto Pigz, desenvol
 LINK PARA BAIXAR O APK => 
 <a href="https://github.com/AlexandreFelipeBuch/Pigz/raw/main/image/app-release.apk">Clique Baixar o aplicativo</a>
 
+Para efetuar o login no app basta colocar qualquer email e senha a validação verifica se o formato do email é valido e se foi digitado algo no campo senha!
+
 Aqui estão as capturas de tela do aplicativo Pigz:
 
 <div align="center">
